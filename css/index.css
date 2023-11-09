@@ -1,6 +1,7 @@
 /*Normalización codigo de navegadores*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+
 :root{
     /*Palette*/
     --primary-solid: #ff3333;
@@ -13,19 +14,19 @@
     --secondary-500: rgb(29, 132, 181, 0.5);
     --secondary-300: rgb(29, 132, 181, 0.3);
 
-    --dark-solid: #30343f;
+    --dark-solid: #1F1F1F;
     --dark-solid: rgb(48, 52, 63, 0.9);
     --dark-solid: rgb(48, 52, 63, 0.5);
     --dark-solid: rgb(48, 52, 63, 0.3);
 
     --dark-bg-solid : #30343f;
-    --light-bg-solid: #fafaff;
-    --light-font-solid: #ffffff;
+    --light-bg-solid: #FaFaFF;
+    --light-font-solid: #FFFFFF;
 
     
     /*Typography*/
 
-    --base-font: 'Inter', sans-serif;
+    --base-font: 'Inter', sans-serif; 
     --alternative-font: 'Raleway', sans-serif;
 
     /*font-sizes*/
@@ -42,6 +43,7 @@
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
     --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
@@ -61,7 +63,7 @@
 html{
     font-size: 62.5%;
     font-family: var(--base-font);
-    color: var(--dark-solid);
+    color: var(--dark-bg-solid);
 }
 
 a{
@@ -72,7 +74,7 @@ a{
 }
 
 header, footer{
-    color:var(--light-font-solid);
+    color: var(--light-font-solid);
     background-color: var(--dark-bg-solid);
     font-family: var(--alternative-font);
 }
@@ -221,4 +223,53 @@ header{
 .hero_link:hover {
     background-color: var(--primary-900);
     color: var(--light-font-solid);
+}
+
+/* Collections*/
+.collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.collection:nth-child(2) .collection_cover { 
+    order:-1
+}
+
+.collection_content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    align-items: start;
+}
+
+.collection_title { 
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 500;
+}
+
+.collection_text { 
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    font-weight: 300;
+    border-bottom: 2px solid var(--primary-solid);
+    padding-bottom: var(--spacing-20);
+}
+
+.collection_link {
+    display: inline-block;
+    font-size: var(--font-medium);
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-16) var(--spacing-36);
+    color: var(--light-font-solid);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background .3s ease-in-out;
+
+}
+
+.collection_link:hover {
+    background-color: var(--primary-900);    
+
 }

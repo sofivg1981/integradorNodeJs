@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./css/index.css" rel="stylesheet" />
+    
   </head>
   <body>
     <header>
@@ -46,46 +47,45 @@
               <a href="./pages/shop.html" class="hero_link">SHOP</a>
             </article>
           </section>
-    <main class="container">
+    <main class="main-container">
 
       <!--Colecciones-->
-      <section id="colecciones">
-        <article>
-          <div>
-            <h1>STAR WARS & AND THE MANDALORIAN</h1>
-            <p>
-              Disfruta de una saga que sigue agregando personajes a su colección
-            </p>
-            <button>VER COLECCIÓN</button>
-          </div>
-          <picture>
-            <img src="/multimedia/star-wars/baby-yoda-1.webp" alt="" />
-          </picture>
+      <section class="collection container">
+        <article class="collection_content">
+            <h3 class="collection_title">STAR WARS & AND THE MANDALORIAN</h3>
+            <p class="collection_text">Disfruta de una saga que sigue agregando personajes a su colección</p>
+            <a href="" class="collection_link">VER COLECCIÓN</a>
         </article>
-        <article>
-          <div>
-            <h1>POKEMON INDIGO</h1>
-            <p>
-              Atrapa todos los que puedas y disfruta de una colección llena de
-              amigos
-            </p>
-            <button>VER COLECCIÓN</button>
-          </div>
-          <picture>
-            <img src="/multimedia/pokemon/vulpix-1.webp" alt="" />
-          </picture>
-        </article>
-        <article>
-          <div>
-            <h1>HARRY POTTER</h1>
-            <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
-            <button>VER COLECCIÓN</button>
-          </div>
-          <picture>
-            <img src="/multimedia/harry-potter/snape-patronus-1.webp" alt="" />
-          </picture>
-        </article>
-      </section>
+        <picture class="collection_cover">
+          <img src="/multimedia/star-wars/baby-yoda-1.webp" alt="" />
+        </picture>
+      </section >
+
+      <section class="collection container">
+          <article class="collection_content">
+              <h3 class="collection_title">POKEMON INDIGO</h3>
+              <p class="collection_text">
+                Atrapa todos los que puedas y disfruta de una colección llena de
+                amigos
+              </p>
+              <a href="" class="collection_link">VER COLECCIÓN</a>
+          </article>
+              <picture class="collection_cover">
+                <img src="/multimedia/pokemon/vulpix-1.webp" alt="" />
+              </picture>
+
+        </section>
+        <section class="collection container">
+          <article class="collection_content">
+              <h3 class="collection_title">HARRY POTTER</h3>
+              <p class="collection_text">Revive los recuerdos de una saga llena de magia y encanto.</p>
+              <a class="collection_link" href="" >VER COLECCIÓN</a>
+          </article>
+              <picture class="collection_cover">
+                <img src="/multimedia/harry-potter/snape-patronus-1.webp" alt="" />
+              </picture>
+
+        </section>
       <!--Últimos lanzamientos-->
       <section id="ultimosLanzamientos">
         <h2>ÚLTIMOS LANZAMIENTOS</h2>
@@ -130,6 +130,7 @@
 
       </section>
     </main>
+
     <footer>
       <section>
         <nav>
