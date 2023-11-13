@@ -353,6 +353,21 @@ header{
     color: var(--secondary-solid);
 }
 
+/*Footer*/
+
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.footer_copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
+
+
+
+/* Animations*/
 @keyframes fade {
     0% {
         opacity: 0;
