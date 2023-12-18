@@ -1,0 +1,90 @@
+<%- include("./partials/head.ejs") %>
+  <body>
+<%- include("./partials/header.ejs") %>
+          <!--Nuevos Ingresos-->
+          <section class="hero">
+            <article class="hero_content container">
+              <h1 class="hero_title">Nuevos Ingresos</h1>
+              <p class="hero_text">Descubrí el próximo Funko Pop de tu colección</p>
+              <a href="./shop" class="hero_link">SHOP</a>
+            </article>
+          </section>
+    <main class="main-container">
+
+
+
+      <!--Colecciones-->
+      <section class="collection container">
+        <article class="collection_content">
+            <h3 class="collection_title">STAR WARS & AND THE MANDALORIAN</h3>
+            <p class="collection_text">Disfruta de una saga que sigue agregando personajes a su colección</p>
+            <a href="" class="collection_link">VER COLECCIÓN</a>
+        </article>
+        <picture class="collection_cover">
+          <img src="./multimedia/star-wars/baby-yoda-1.webp" alt="" />
+        </picture>
+      </section >
+
+      <section class="collection container">
+          <article class="collection_content">
+              <h3 class="collection_title">POKEMON INDIGO</h3>
+              <p class="collection_text">
+                Atrapa todos los que puedas y disfruta de una colección llena de
+                amigos
+              </p>
+              <a href="" class="collection_link">VER COLECCIÓN</a>
+          </article>
+              <picture class="collection_cover">
+                <img src="./multimedia/pokemon/vulpix-1.webp" alt="" />
+              </picture>
+
+      </section>
+      <section class="collection container">
+          <article class="collection_content">
+              <h3 class="collection_title">HARRY POTTER</h3>
+              <p class="collection_text">Revive los recuerdos de una saga llena de magia y encanto.</p>
+              <a class="collection_link" href="" >VER COLECCIÓN</a>
+          </article>
+              <picture class="collection_cover">
+                <img src="./multimedia/harry-potter/snape-patronus-1.webp" alt="" />
+              </picture>
+
+      </section>
+      <!--Últimos lanzamientos-->
+      <section class="slider container glide">
+        <h2 class="slider__title">ÚLTIMOS LANZAMIENTOS</h2>
+        <div class="glide__track" data-glide-el="track"> 
+          <ul class="slider__items glide__slides">
+            <%funkos.forEach(funko =>{%>
+            <li class="slider__item glide__slide">
+              <article class="card-item">
+                <a class="card-item_link" href="/item/<%=funko.product_id%>">
+                <picture class="card-item_cover">
+                  <span class="card-item_tag">Nuevo</span>
+                  <img class="card-item_img--front" src= <%=funko.img_front%> alt=<%=funko.product_name%>/>
+                  <img class="card-item_img--back" src=<%=funko.img_back%> alt=<%=funko.product_name%>/>
+                </picture>
+                <div>
+                  <p class="card-item_license"><%=funko.licence_name%></p>
+                  <h4 class="card-item_name"><%=funko.product_name%></h4>
+                  <p class="card-item_price"><%=funko.product_price%></p>
+                  <p class="card-item_promo">3 CUOTAS SIN INTERÉS</p>
+                </div>
+              </a>
+              </article>
+            </li>
+            <%})%>
+         
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon icon="tabler:chevron-left"></iconify-icon></button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon icon="tabler:chevron-right"></iconify-icon></button>
+        </div>
+      </section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+    </body>
+  
+</html>
